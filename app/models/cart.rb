@@ -12,9 +12,9 @@ class Cart < ActiveRecord::Base
   def total
     @total = 0
     self.line_items.each do |i|
-    @total+= i.item.price * i.quantity
+      @total+= i.item.price * i.quantity
     end
-    @total
-  end
+  @total
+end
 
 end
