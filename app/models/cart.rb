@@ -1,7 +1,7 @@
 class Cart < ActiveRecord::Base
 
   belongs_to :user
-  has_many :line_items, :foreign_key => "cart_id"
+  has_many :line_items
   has_many :items, through: :line_items
 
 
