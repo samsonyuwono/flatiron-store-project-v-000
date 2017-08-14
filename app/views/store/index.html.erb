@@ -8,6 +8,7 @@
   <p>
     <%= item.title %> | $<%= item.price.to_f/100 %> |
     <% if logged_in? %>
+    <li>Signed in as avi.turkewitz@test.cats</li>
       <%= button_to 'Add to Cart', line_items_path(item_id: item) %>
       <% end %>
     </p>
