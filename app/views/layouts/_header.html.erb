@@ -8,6 +8,6 @@
         <li> <%= link_to "sign in", new_user_session_path %> </li>
         <% end %>
         <% if !!@cart %>
-          <li> <%= link_to "Cart", cart_path(current_cart) %></li>
+          <li> <%= link_to "Cart", cart_path(@cart) %></li>
         <% end %>
 </nav>
