@@ -6,9 +6,9 @@ class CartsController < ApplicationController
   end
 
   def checkout
-    cart.checkout
-    current_cart = nil
-    redirect_to cart_path(cart)
+    @cart.checkout
+    @cart = nil
+    redirect_to cart_path(@cart)
   end
 
   private
