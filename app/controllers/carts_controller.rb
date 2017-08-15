@@ -9,6 +9,7 @@ class CartsController < ApplicationController
     @cart.checkout
     current_user.current_cart = nil
     current_user.save
+    flash[:notice] = 'Checkout Successful! Your shipped order is below'
     redirect_to cart_path(@cart)
   end
 
