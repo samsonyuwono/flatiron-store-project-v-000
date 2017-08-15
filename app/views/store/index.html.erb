@@ -5,8 +5,6 @@
 <% @items.each do |item| %>
   <p>
     <%= item.title %> | $<%= item.price.to_f/100 %>|
-    <% if user_signed_in? %>
-    <%= button_to 'Add to Cart', line_items_path(item_id: item)%></p>
-      <% end %>
+    <%= button_to 'Add to Cart', line_items_path(item_id: item) if user_signed_in? %></p>
     <%end%>
   </p>
