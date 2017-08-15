@@ -18,6 +18,4 @@
 
 </p>
 
-<% if @cart.status != "submitted"%>
-<%= button_to "Checkout", checkout_path%>
-<%end%>
+<%= button_to "Checkout", checkout_path if @cart.status != 'submitted'%>
